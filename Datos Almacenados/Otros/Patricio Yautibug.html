@@ -239,7 +239,24 @@ var Temperatura =[]; var Fecha =[];
 						display: true,
 						labelString: "FECHA [dd/mm/aa]",
 					}}]												
-		}}});	  
+		}}});	
+
+
+	$("#DescTemp").click(function() {
+	   myChart.options.title.text = 'Temperatura Corporal - Historial';
+	   myChart.update({
+		  duration: 0
+	   });
+	   var link = document.createElement('a');
+	   link.href = myChart.toBase64Image();
+	   link.download = 'Temperatura Corporal.png';
+	   link.click();
+	   myChart.options.title.text = 'HISTORIAL: TEMPERATURA CORPORAL';
+	   myChart.update({
+		  duration: 0
+	   });
+	   console.log("holaaaa")
+	});		
   
 });
 
