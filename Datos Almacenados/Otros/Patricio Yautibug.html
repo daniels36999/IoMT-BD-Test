@@ -134,7 +134,7 @@
 				</div>
 				<div id="Posicion_Botton">
 					<div id="btnAnimacion" class="wrap1"><!-- Boton Descargar-->
-						<button id="DescO2Sa" class="btn btn-success">
+						<button id="DescO2Sat" class="btn btn-success">
 							<i class="fas fa-file-excel"></i> DESCARGAR
 						</button>
 					</div>
@@ -566,7 +566,7 @@
 			 });
 			var pdf = new jsPDF('l', 'pt', [reportPageWidth, reportPageHeight]);
 			pdf.addImage($(pdfCanvas)[0], 'PNG', 0, 0);
-			pdf.save('filename.pdf');
+			pdf.save('Reporte Grafico IoMT.pdf');
 		});
 		
 		function done(){
