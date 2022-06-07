@@ -7,6 +7,7 @@
 		
 		<title>HISTORIAL IoMT</title>
 		
+		<style type="text/css">#oli  {display: none;}</style>
 		<script   src="https://code.jquery.com/jquery-2.2.4.min.js"integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
 
 	   <!-- LIBRERIAS EXCEL-->
@@ -227,6 +228,7 @@
 							labelString: "FECHA [dd/mm/aa]",
 						}}]												
 			}}});	
+		document.getElementById('oli').style.display = 'block';
 		$("#DescTemp").click(function() {
 		   myChart.options.title.text = 'Temperatura Corporal - Historial';
 		   myChart.update({
@@ -300,8 +302,6 @@
 								labelString: "FECHA [dd/mm/aa]",
 							}}]												
 				}}});	
-			<!-- document.getElementById('Separa_Grafica').style.display = 'block'; -->
-			<!-- document.getElementById('btnAnimacion').style.display = 'block'; -->	
 			$("#DescPes").click(function() {
 			   myChart.options.title.text = 'Peso Corporal - Historial';
 			   myChart.update({
