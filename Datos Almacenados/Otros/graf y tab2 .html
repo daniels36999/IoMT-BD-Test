@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+		<link rel="stylesheet" type="text/css"href="/graficas_iot.css">
+		<style type="text/css">#oli  {display: none;}</style>
+
+		
+    </head>
+    <body>
+	
+	<table border="1" cellspacing="0" cellpadding="5" id="tbl">
+    <thead>
+      <tr>
+		<td>Fecha</td>
+		<td>Hora</td>
+        <td>Temperatura [°C]</td>
+        <td>Peso [Kg]</td>
+        <td>Estatura [m]</td>
+        <td>IMC [Kg/m^2]</td>
+		<td>O2Sat [%]</td>
+      </tr>
+    </thead>
+	
+    <tr>
+      <td class="GF">04/06/2022</td><td class="GH">11.50</td><td class="GT">32.98</td><td class="GP">77.65</td><td class="GE">1.72</td><td class="GI">31.78</td><td class="GO">95.00</td>
+    </tr>
+    <tr>
+      <td class="GF">04/06/2022</td><td class="GH">12.50</td><td class="GT">35.98</td><td class="GP">74.65</td><td class="GE">1.71</td><td class="GI">32.78</td><td class="GO">92.00</td>
+    </tr>
+    <tr>
+      <td class="GF">05/06/2022</td><td class="GH">11.50</td><td class="GT">36.98</td><td class="GP">75.65</td><td class="GE">1.76</td><td class="GI">30.78</td><td class="GO">96.00</td>
+    </tr>
+    <tr>
+      <td class="GF">06/06/2022</td><td class="GH">10.50</td><td class="GT">34.98</td><td class="GP">77.65</td><td class="GE">1.74</td><td class="GI">30.78</td><td class="GO">94.00</td>
+    </tr>
+    <tr>
+      <td class="GF">07/06/2022</td><td class="GH">10.50</td><td class="GT">32.98</td><td class="GP">79.65</td><td class="GE">1.77</td><td class="GI">31.78</td><td class="GO">97.00</td>
+    </tr>
+    <tr>
+      <td class="GF">08/06/2022</td><td class="GH">10.50</td><td class="GT">31.98</td><td class="GP">74.65</td><td class="GE">1.75</td><td class="GI">31.78</td><td class="GO">96.00</td>
+    </tr>
+  </table>
+  
+  <br>
+  
+  <!-- BOTON EXPORAR PDF-->
+	<hr/>
+	<div id="centrar1"><!-- Grafica-->
+		<button type="button" class="button2" id="btnGraficar" onclick="btnGraficar">VIZUALIZAR GRAFICAS</button>
+	</div><hr/>	
+  
+	<div id="oli">
+<!-- GRAFICA TEMPERATURA CORPORAL-->
+	<hr/>
+	<div id="Separa_Grafica">
+		<div id="Grafica_Izqui"><!-- Grafica-->
+			<canvas id="GraTemperatura" width="1000" height="400"></canvas>
+		</div>
+		<div id="Posicion_Botton">
+			<div id="btnAnimacion" class="wrap1"><!-- Boton Descargar-->
+				<button type="button" class="button1" id="DescTemp"onclick="DescTemp">Descargar</button>
+			</div>
+		</div>
+	</div><hr/>
+	
+<!-- GRAFICA PESO CORPORAL-->
+	<div id="Separa_Grafica">
+		<div id="Grafica_Izqui"><!-- Grafica-->
+			<canvas id="GraPeso" width="1000" height="400"></canvas>
+		</div>
+		<div id="Posicion_Botton">
+			<div id="btnAnimacion" class="wrap1"><!-- Boton Descargar-->
+				<button type="button" class="button1" id="DescPes"onclick="DescPes">Descargar</button>
+			</div>
+		</div>
+	</div><hr/>
+	
+<!-- GRAFICA ESTATURA CORPORAL-->
+	<div id="Separa_Grafica">
+		<div id="Grafica_Izqui"><!-- Grafica-->
+			<canvas id="GraEstatura" width="1000" height="400"></canvas>
+		</div>
+		<div id="Posicion_Botton">
+			<div id="btnAnimacion" class="wrap1"><!-- Boton Descargar-->
+				<button type="button" class="button1" id="DescEst"onclick="DescEst">Descargar</button>
+			</div>
+		</div>
+	</div><hr/>
+	
+<!-- GRAFICA IMC CORPORAL-->
+	<div id="Separa_Grafica">
+		<div id="Grafica_Izqui"><!-- Grafica-->
+			<canvas id="GraImc" width="1000" height="400"></canvas>
+		</div>
+		<div id="Posicion_Botton">
+			<div id="btnAnimacion" class="wrap1"><!-- Boton Descargar-->
+				<button type="button" class="button1" id="DescImc"onclick="DescImc">Descargar</button>
+			</div>
+		</div>
+	</div><hr/>	
+
+<!-- GRAFICA IMC CORPORAL-->
+	<div id="Separa_Grafica">
+		<div id="Grafica_Izqui"><!-- Grafica-->
+				<canvas id="GraO2Sat" width="1000" height="400"></canvas>
+		</div>
+		<div id="Posicion_Botton">
+			<div id="btnAnimacion" class="wrap1"><!-- Boton Descargar-->
+				<button type="button" class="button1" id="DescO2Sat"onclick="DescO2Sat">Descargar</button>
+			</div>
+		</div>
+	</div><hr/>	
+	
+<!-- BOTON EXPORAR PDF-->
+		<hr/>
+		<div id="centrar2"><!-- Grafica-->
+			<button type="button" class="button2" id="DescPDF"onclick="DescPDF">Descargar Historial en PDF</button>
+		</div><hr/>	
+		<hr/>
+	</div>
+
+	</body>
+	
+	
+	
+		
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.debug.js'></script>
+<script  src="/graficas_iot.js"></script>
+	
+	
+</html>
